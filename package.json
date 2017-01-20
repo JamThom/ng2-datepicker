@@ -2,38 +2,48 @@
   "_args": [
     [
       {
-        "raw": "ng2-datepicker@https://github.com/JamThom/ng2-datepicker/tarball/d2da71a25b249ba13754daf3c41235498e8a63a8",
+        "raw": "ng2-datepicker@^1.4.8",
         "scope": null,
         "escapedName": "ng2-datepicker",
         "name": "ng2-datepicker",
-        "rawSpec": "https://github.com/JamThom/ng2-datepicker/tarball/d2da71a25b249ba13754daf3c41235498e8a63a8",
-        "spec": "https://github.com/JamThom/ng2-datepicker/tarball/d2da71a25b249ba13754daf3c41235498e8a63a8",
-        "type": "remote"
+        "rawSpec": "^1.4.8",
+        "spec": ">=1.4.8 <2.0.0",
+        "type": "range"
       },
       "/Users/jamthom/Projects/maersk-line-container-sales/resources/admin"
     ]
   ],
-  "_from": "https://github.com/JamThom/ng2-datepicker/tarball/d2da71a25b249ba13754daf3c41235498e8a63a8",
+  "_from": "ng2-datepicker@>=1.4.8 <2.0.0",
   "_id": "ng2-datepicker@1.4.8",
   "_inCache": true,
   "_location": "/ng2-datepicker",
+  "_nodeVersion": "7.4.0",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/ng2-datepicker-1.4.8.tgz_1484052311721_0.6471190152224153"
+  },
+  "_npmUser": {
+    "name": "jkuri",
+    "email": "jkuri88@gmail.com"
+  },
+  "_npmVersion": "4.0.5",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "ng2-datepicker@https://github.com/JamThom/ng2-datepicker/tarball/d2da71a25b249ba13754daf3c41235498e8a63a8",
+    "raw": "ng2-datepicker@^1.4.8",
     "scope": null,
     "escapedName": "ng2-datepicker",
     "name": "ng2-datepicker",
-    "rawSpec": "https://github.com/JamThom/ng2-datepicker/tarball/d2da71a25b249ba13754daf3c41235498e8a63a8",
-    "spec": "https://github.com/JamThom/ng2-datepicker/tarball/d2da71a25b249ba13754daf3c41235498e8a63a8",
-    "type": "remote"
+    "rawSpec": "^1.4.8",
+    "spec": ">=1.4.8 <2.0.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://github.com/JamThom/ng2-datepicker/tarball/d2da71a25b249ba13754daf3c41235498e8a63a8",
-  "_shasum": "2ec9ef6ad31b2ed9d462083fa966e29f152dab61",
+  "_resolved": "https://registry.npmjs.org/ng2-datepicker/-/ng2-datepicker-1.4.8.tgz",
+  "_shasum": "f65714513dc87de3d52c55a52297b7e6c395c2e2",
   "_shrinkwrap": null,
-  "_spec": "ng2-datepicker@https://github.com/JamThom/ng2-datepicker/tarball/d2da71a25b249ba13754daf3c41235498e8a63a8",
+  "_spec": "ng2-datepicker@^1.4.8",
   "_where": "/Users/jamthom/Projects/maersk-line-container-sales/resources/admin",
   "author": {
     "name": "Jan Kuri",
@@ -63,6 +73,12 @@
     "typescript": "2.0.10",
     "zone.js": "0.7.2"
   },
+  "directories": {},
+  "dist": {
+    "shasum": "f65714513dc87de3d52c55a52297b7e6c395c2e2",
+    "tarball": "https://registry.npmjs.org/ng2-datepicker/-/ng2-datepicker-1.4.8.tgz"
+  },
+  "gitHead": "17409fe97f55cf3c72f3d0cfd5aaf2f60df4d473",
   "homepage": "https://github.com/jkuri/ng2-datepicker#readme",
   "keywords": [
     "angular",
@@ -73,10 +89,19 @@
   ],
   "license": "MIT",
   "main": "ng2-datepicker.js",
+  "maintainers": [
+    {
+      "name": "ghetolay",
+      "email": "ghetolay@gmail.com"
+    },
+    {
+      "name": "jkuri",
+      "email": "jkuri88@gmail.com"
+    }
+  ],
   "name": "ng2-datepicker",
   "optionalDependencies": {},
-  "readme": "# ng2-datepicker\nAngular2 Datepicker Component\n\n***ng2-datepicker*** is a datepicker component for Angular2.\n\n## Demo\n\n[http://ng2-datepicker.jankuri.com](http://ng2-datepicker.jankuri.com)\n\n## Installation:\n\nInstall ng2-datepicker via `npm`\n\n````shell\nnpm install ng2-datepicker --save\n````\n\nThen include [Ionicons](http://ionicons.com/)'s CSS in `index.html`\n\n```html\n<link rel=\"stylesheet\" href=\"http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css\" media=\"all\">\n```\n\n## Usage\n\n_Usage examples are based on a project created with [Angular CLI](https://github.com/angular/angular-cli) + Angular 2.0.0+_\n\n**Option A:** Using ng2-datepicker with `ngModel`\n\n1. Import `DatePickerModule` in `app.module.ts`\n  ```ts\n  import { BrowserModule } from '@angular/platform-browser';\n  import { NgModule } from '@angular/core';\n  import { FormsModule } from '@angular/forms';\n  import { HttpModule } from '@angular/http';\n\n  import { DatePickerModule } from 'ng2-datepicker';\n\n  import { AppComponent } from './app.component';\n\n  @NgModule({\n    declarations: [\n      Appcomponent\n    ],\n    imports: [\n      BrowserModule,\n      FormsModule,\n      HttpModule,\n      DatePickerModule\n    ],\n    providers: [],\n    bootstrap: [AppComponent]\n  })\n  export class AppModule {}\n  ```\n\n2. Use `<ng2-datepicker>` in `app.component.html`\n  ```html\n  <ng2-datepicker [(ngModel)]=\"date\"></ng2-datepicker>\n\n  Selected date is: {{ date }}\n  ```\n\n**Option B:** Using ng2-datepicker with `FormBuilder` (ReactiveFormsModule)\n\n1. Import `DatePickerModule` and `ReactiveFormsModule` in `app.module.ts`\n  ```ts\n  import { BrowserModule } from '@angular/platform-browser';\n  import { NgModule } from '@angular/core';\n  import { FormsModule, ReactiveFormsModule } from '@angular/forms';\n  import { HttpModule } from '@angular/http';\n  import { DatePickerModule } from 'ng2-datepicker';\n\n  import { AppComponent } from './app.component';\n\n  @NgModule({\n    declarations: [\n      Appcomponent\n    ],\n    imports: [\n      BrowserModule,\n      FormsModule,\n      HttpModule,\n      ReactiveFormsModule,\n      DatePickerModule\n    ],\n    providers: [],\n    bootstrap: [AppComponent]\n  })\n  export class AppModule {}\n  ```\n\n2. Create FormControl for date field in `app.component.ts`\n\n  ```ts\n  import { Component, OnInit } from '@angular/core';\n  import { FormGroup, FormBuilder } from '@angular/forms';\n\n  @Component({\n    selector: 'app-root',\n    templateUrl: './app.component.html',\n    styleUrls: ['./app.component.css']\n  })\n  export class AppComponent implements OnInit {\n\n    dataForm: FormGroup;\n\n    constructor(private formBuilder: FormBuilder) {\n    }\n\n    ngOnInit() {\n      this.dataForm = this.formBuilder.group({\n        date: ''\n      });\n    }\n  }\n  ```\n\n3. Use `<ng2-datepicker>` with `formControlName` in `app.component.html`\n\n  ```html\n  <form [formGroup]=\"dataForm\">\n    <ng2-datepicker formControlName=\"date\"></ng2-datepicker>\n  </form>\n  ```\n\n## API\n\nOptions can be passed to `<ng2-datepicker>` component via property bindings.\n\nFor input `[options]` please see [this](https://github.com/jkuri/ng2-datepicker/blob/master/src/components/ng2-datepicker.component.ts#L33-L40).\n\n## Events\n\nYou can subscribe to `(outputEvents)` or pass event to the datepicker component via `[inputEvents]`.\n\n## Example from demo:\n\n```html\n<ng2-datepicker [(ngModel)]=\"data.date\"></ng2-datepicker>\n<ng2-datepicker [(ngModel)]=\"data2.date\"></ng2-datepicker>\n<ng2-datepicker [(ngModel)]=\"data3.date\"></ng2-datepicker>\n<ng2-datepicker [(ngModel)]=\"data4.date\"></ng2-datepicker>\n```\n\n## Licence\n\nThis project is licensed under the MIT license. See the [LICENSE](LICENSE) file for more info.\n\n",
-  "readmeFilename": "README.md",
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jkuri/ng2-datepicker.git"

@@ -572,11 +572,26 @@ export class DatePickerComponent implements ControlValueAccessor, OnInit {
   }
 
   close() {
+    if (typeof window !== 'undefined') {
+      let body = document.querySelector('body');
+      body.removeEventListener('click', this.unFocus, false);
+    }
     this.opened = false;
     this.outputEvents.emit({ type: 'default', data: 'closed' });
   }
 
+  unFocus = e => {
+     if (!this.opened || !e.target) { return; };
+     if (this.el.nativeElement !== e.target && !this.el.nativeElement.contains((<any>e.target))) {
+       this.close();
+     }
+  }
+
   onOpen() {
+    if (typeof window !== 'undefined') {
+      let body = document.querySelector('body');
+      body.addEventListener('click', this.unFocus, false);
+    }
     this.yearPicker = false;
   }
 
