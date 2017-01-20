@@ -401,16 +401,6 @@ export class DatePickerComponent implements ControlValueAccessor, OnInit {
     this.generateCalendar();
     this.outputEvents.emit({ type: 'default', data: 'init' });
 
-    if (typeof window !== 'undefined') {
-      let body = document.querySelector('body');
-      body.addEventListener('click', e => {
-        if (!this.opened || !e.target) { return; };
-        if (this.el.nativeElement !== e.target && !this.el.nativeElement.contains((<any>e.target))) {
-          this.close();
-        }
-      }, false);
-    }
-
     if (this.inputEvents) {
       this.inputEvents.subscribe((e: any) => {
         if (e.type === 'action') {
